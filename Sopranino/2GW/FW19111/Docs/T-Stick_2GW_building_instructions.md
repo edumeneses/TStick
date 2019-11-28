@@ -49,12 +49,21 @@ This schematic is outdated. Use for FSR and Piezo Electronics reference only.
 Cut the PVC in half as in the picture and tape the conductive tape 1.5cm apart. 
 Length of holes assembly is 1.5 * 15 for 16 strips. That is 22.5cm. You need aprox. 8 cm of copper tape per strip.
 
+
+__Tip__: Before start assembling the T-Stick, pay attention to the position of the components. Plan yourself to place the components for them to not "overlap" each other (check image below). Also, make sure the cables are long enough to allow the tube and caps to be opened and closed properly.
+
+
+![building_Sopranino 2nd image](./images/building_Sopranino_2.jpg "Building a Sopranino T-Stick")
+
+
+
 The Capsense (https://www.cypress.com/le/127221/download) breakout boards use 2 3D printed bases. It connects via a jumper cable with SH1.
 connectors to the D32 Pro (https://wiki.wemos.cc/products:d32:d32_pro).
 
-__CAUTION__: THE CAPSENSE BOARD HAS THE CONNECTORS LABELED FOR THE IMU AND MICROCONTROLLER (Black marker). BE CAREFUL WHEN CONNECTING THEM BECAUSE OF A LAST MINUTE CHANGE IN THE PINOUT OF THE BOARD. SEE SCHEMATIC BELOW. 
+__CAUTION__: 
+THE CAPSENSE BOARD HAS THE CONNECTORS LABELED FOR THE MICROCONTROLLER (IN) AND IMU (OUT). BE CAREFUL WHEN CONNECTING THEM BECAUSE OF A LAST MINUTE CHANGE IN THE PINOUT OF THE BOARD. SEE SCHEMATIC BELOW. 
 
-The Capsense label for ground and +3V3 is inverted at the end that goes to the IMU. You should connect:
+__The Capsense label for ground and +3V3 is inverted at the end that goes to the IMU. You should connect:__
 
 __Capsense -> IMU__
 GND ------> +3V3
@@ -64,8 +73,9 @@ SCL ------> SCL
 
 ![Capsense-IMU connection](./images/IMU_connection.jpg "Capsense-IMU connection")
 
-Please take extra care since it is necessary to cut the cable and solder the right ends at the IMU.
+Please take extra care since it is necessary to cut the cable and solder the right ends at the IMU. 
 
+Also, if you need to extend the length of the SH1.0 cable, __always cut the wire in half and extend using both parts according to the color__. Using two different wires can lead to mistakes since the SH1.0 cable is parallel. __Failing to follow this step can end up burning your ESP32__.
 
 All the building tools can be found in the Machine Shop at the McGill Music Tech Department.
 
@@ -104,7 +114,7 @@ Non-Inverting Input A | 3   6| Inverting Input B
                       +------+
 ```
 
-OBS: Don't forget to connect GND and V+.
+__OBS__: Don't forget to connect GND and V+.
 
 ##### Envelope Follower Circuit
 

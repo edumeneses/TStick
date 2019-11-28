@@ -54,9 +54,7 @@ boolean readTouch(){
 
   Wire.requestFrom(I2C_ADDR,2);
   while (Wire.available()) { // slave may send less than requested
-    // byte c = Wire.read();
-    // temp[i] = c; // receive a byte as character
-    temp[i] = Wire.read();
+    temp[i] = Wire.read(); // receive a byte as character
     i++;
   }    
   Wire.endTransmission();

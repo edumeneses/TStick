@@ -108,7 +108,7 @@ struct Tstick {
   int32_t firmware;
   char oscIP[17];
   int32_t oscPORT;
-  byte FSRoffset;
+  float FSRoffset;
   byte touchMask[2];
   float abias[3];
   float mbias[3];

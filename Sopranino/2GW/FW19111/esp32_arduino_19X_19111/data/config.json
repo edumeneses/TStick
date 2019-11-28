@@ -1,8 +1,8 @@
 {
-    "id": 192,
+    "id": 194,
     "type": "SN", 
     "author": "IDMIL",
-    "color": "black",
+    "color": "Yellow",
     "APpasswd": "mappings",
     "lastConnectedNetwork": "tstick_network",
     "lastStoredPsk": "mappings",

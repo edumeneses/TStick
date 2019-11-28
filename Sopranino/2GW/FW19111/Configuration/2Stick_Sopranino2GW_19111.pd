@@ -1,50 +1,50 @@
-#N canvas 0 23 1680 982 10;
+#N canvas 343 26 1108 960 10;
 #X declare -lib Gem;
-#X obj 294 89 cnv 15 416 210 empty empty T-Stick 20 12 0 20 -228856
+#X obj 357 25 cnv 15 464 230 empty empty T-Stick 20 12 0 20 -228856
 -66577 0;
-#X obj 48 650 array set Touch;
-#X obj 141 688 vsl 45 135 -1 1 0 0 empty empty AccelX 0 -9 0 10 -262144
--1 -1 6907 1;
-#X obj 191 688 vsl 45 135 -1 1 0 0 empty empty AccelY 0 -9 0 10 -262144
--1 -1 6775 1;
-#X obj 241 688 vsl 45 135 -1 1 0 0 empty empty AccelZ 0 -9 0 10 -262144
--1 -1 6858 1;
-#X obj 291 688 vsl 45 135 -1 1 0 0 empty empty GyroX 0 -9 0 10 -262144
--1 -1 6714 1;
-#X obj 341 688 vsl 45 135 -1 1 0 0 empty empty GyroY 0 -9 0 10 -262144
--1 -1 6711 1;
-#X obj 391 688 vsl 45 135 -1 1 0 0 empty empty GyroZ 0 -9 0 10 -262144
+#X obj 54 650 array set Touch;
+#X obj 147 688 vsl 45 135 -1 1 0 0 empty empty AccelX 0 -9 0 10 -262144
+-1 -1 6632 1;
+#X obj 197 688 vsl 45 135 -1 1 0 0 empty empty AccelY 0 -9 0 10 -262144
+-1 -1 5624 1;
+#X obj 247 688 vsl 45 135 -1 1 0 0 empty empty AccelZ 0 -9 0 10 -262144
+-1 -1 3418 1;
+#X obj 297 688 vsl 45 135 -1 1 0 0 empty empty GyroX 0 -9 0 10 -262144
+-1 -1 6712 1;
+#X obj 347 688 vsl 45 135 -1 1 0 0 empty empty GyroY 0 -9 0 10 -262144
+-1 -1 6705 1;
+#X obj 397 688 vsl 45 135 -1 1 0 0 empty empty GyroZ 0 -9 0 10 -262144
 -1 -1 6701 1;
-#X obj 591 688 vsl 45 135 0 1 0 0 empty empty Pressure 0 -9 0 10 -262144
--1 -1 8007 1;
-#X obj 641 688 vsl 45 135 0 1 0 0 empty empty Piezo 0 -9 0 10 -262144
+#X obj 597 688 vsl 45 135 0 1 0 0 empty empty Pressure 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 441 688 vsl 45 135 -1 1 0 0 empty empty MagX 0 -9 0 10 -262144
--1 -1 6781 1;
-#X obj 491 688 vsl 45 135 -1 1 0 0 empty empty MagY 0 -9 0 10 -262144
--1 -1 6736 1;
-#X obj 541 688 vsl 45 135 -1 1 0 0 empty empty MagZ 0 -9 0 10 -262144
--1 -1 6591 1;
-#X obj 898 739 timer;
-#X floatatom 898 763 8 0 0 0 - - -;
-#X obj 898 714 t b b;
-#X obj 898 689 r rawtimer;
+#X obj 647 688 vsl 45 135 0 1 0 0 empty empty Piezo 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 447 688 vsl 45 135 -1 1 0 0 empty empty MagX 0 -9 0 10 -262144
+-1 -1 7214 1;
+#X obj 497 688 vsl 45 135 -1 1 0 0 empty empty MagY 0 -9 0 10 -262144
+-1 -1 6669 1;
+#X obj 547 688 vsl 45 135 -1 1 0 0 empty empty MagZ 0 -9 0 10 -262144
+-1 -1 7209 1;
+#X obj 904 739 timer;
+#X floatatom 904 763 8 0 0 0 - - -;
+#X obj 904 714 t b b;
+#X obj 904 689 r rawtimer;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array rawtime 100 float 1;
-#A 0 7.25624 5.80499 7.25624 2.90249 5.80499 7.25624 2.90249 7.25624
-7.25624 5.80499 4.35374 7.25624 4.35374 5.80499 4.35374 4.35374 7.25624
-5.80499 5.80499 7.25624 4.35374 5.80499 5.80499 5.80499 2.90249 8.70748
-7.25624 5.80499 4.35374 5.80499 4.35374 5.80499 5.80499 5.80499 4.35374
-7.25624 5.80499 7.25624 4.35374 5.80499 5.80499 5.80499 2.90249 7.25624
-7.25624 5.80499 5.80499 4.35374 7.25624 4.35374 5.80499 5.80499 7.25624
-4.35374 7.25624 4.35374 5.80499 5.80499 5.80499 5.80499 4.35374 8.70748
-5.80499 4.35374 5.80499 5.80499 4.35374 5.80499 5.80499 5.80499 5.80499
-5.80499 5.80499 5.80499 5.80499 5.80499 4.35374 5.80499 2.90249 8.70748
-5.80499 5.80499 5.80499 5.80499 4.35374 5.80499 5.80499 5.80499 5.80499
-5.80499 5.80499 5.80499 5.80499 4.35374 5.80499 5.80499 4.35374 7.25624
-7.25624 4.35374;
+#A 0 7.25624 5.80499 5.80499 4.35374 7.25624 5.80499 5.80499 4.35374
+8.70748 5.80499 5.80499 5.80499 5.80499 5.80499 7.25624 5.80499 7.25624
+5.80499 4.35374 7.25624 5.80499 5.80499 7.25624 4.35374 7.25624 4.35374
+7.25624 5.80499 5.80499 5.80499 7.25624 5.80499 5.80499 5.80499 7.25624
+5.80499 5.80499 5.80499 7.25624 5.80499 5.80499 5.80499 7.25624 4.35374
+7.25624 4.35374 7.25624 5.80499 7.25624 5.80499 5.80499 5.80499 5.80499
+5.80499 5.80499 5.80499 7.25624 5.80499 7.25624 5.80499 5.80499 5.80499
+5.80499 5.80499 7.25624 7.25624 5.80499 5.80499 5.80499 7.25624 5.80499
+5.80499 4.35374 7.25624 5.80499 4.35374 7.25624 5.80499 7.25624 5.80499
+5.80499 5.80499 7.25624 4.35374 7.25624 4.35374 7.25624 5.80499 5.80499
+5.80499 5.80499 5.80499 7.25624 4.35374 5.80499 5.80499 8.70748 4.35374
+5.80499 5.80499;
 #X coords 0 100 99 0 200 140 1;
-#X restore 692 686 graph;
+#X restore 698 686 graph;
 #N canvas 264 335 568 475 timegraph 0;
 #X obj 111 257 list store;
 #X obj 117 300 list split 100;
@@ -66,24 +66,23 @@
 #X connect 4 0 0 0;
 #X connect 5 0 3 0;
 #X connect 6 0 2 0;
-#X restore 898 787 pd timegraph;
-#X obj 898 811 array set rawtime;
-#X obj 104 581 outlet;
-#X obj 301 39 inlet;
-#X floatatom 241 831 7 0 0 0 - - -;
-#X floatatom 291 831 7 0 0 0 - - -;
-#X floatatom 341 831 7 0 0 0 - - -;
-#X floatatom 391 831 7 0 0 0 - - -;
-#X floatatom 591 831 7 0 0 0 - - -;
-#X floatatom 641 831 7 0 0 0 - - -;
-#X floatatom 441 831 7 0 0 0 - - -;
-#X floatatom 491 831 7 0 0 0 - - -;
-#X floatatom 541 831 7 0 0 0 - - -;
-#X floatatom 191 831 7 0 0 0 - - -;
-#X floatatom 141 831 7 0 0 0 - - -;
-#X obj 251 451 netreceive -u -b;
-#X text 358 452 UDP packets \, binary output, f 13;
-#X obj 251 472 oscparse;
+#X restore 904 787 pd timegraph;
+#X obj 904 811 array set rawtime;
+#X obj 110 581 outlet;
+#X obj 231 128 inlet;
+#X floatatom 247 831 7 0 0 0 - - -;
+#X floatatom 297 831 7 0 0 0 - - -;
+#X floatatom 347 831 7 0 0 0 - - -;
+#X floatatom 397 831 7 0 0 0 - - -;
+#X floatatom 597 831 7 0 0 0 - - -;
+#X floatatom 647 831 7 0 0 0 - - -;
+#X floatatom 447 831 7 0 0 0 - - -;
+#X floatatom 497 831 7 0 0 0 - - -;
+#X floatatom 547 831 7 0 0 0 - - -;
+#X floatatom 197 831 7 0 0 0 - - -;
+#X floatatom 147 831 7 0 0 0 - - -;
+#X obj 257 451 netreceive -u -b;
+#X obj 257 472 oscparse;
 #N canvas 1168 510 399 333 cook_touch_sopranino 0;
 #X obj 101 37 inlet;
 #X obj 180 92 unpack f f;
@@ -301,58 +300,56 @@
 #X connect 6 1 5 1;
 #X connect 6 2 1 0;
 #X connect 7 0 8 0;
-#X restore 109 623 pd cook_touch_sopranino;
-#X text 339 218 port to receive messages;
-#X msg 251 396 listen \$1;
-#X floatatom 300 219 6 0 0 0 - - -;
-#X obj 144 18 loadbang;
-#X obj 262 623 unpack f f f;
-#X obj 342 623 unpack f f f;
-#X obj 423 623 unpack f f f;
-#X obj 181 472 s rawtimer;
-#X obj 635 140 tgl 25 0 scalibrate calibrate Calibrate -14 38 0 10
--262144 -1 -1 0 1;
-#X obj 528 109 tgl 20 0 empty empty touch_mask -2 -8 0 10 -262144 -1
+#X restore 115 623 pd cook_touch_sopranino;
+#X text 405 168 port to receive messages;
+#X msg 257 396 listen \$1;
+#X floatatom 366 169 6 0 0 0 - - -;
+#X obj 168 15 loadbang;
+#X obj 268 623 unpack f f f;
+#X obj 348 623 unpack f f f;
+#X obj 429 623 unpack f f f;
+#X obj 187 472 s rawtimer;
+#X obj 366 198 tgl 20 0 empty touch touch_mask 25 10 0 10 -262144 -1
 -1 0 1;
-#N canvas 665 26 860 822 masks 0;
-#X obj 307 252 cnv 15 35 155 empty empty empty 20 12 0 14 -233017 -66577
+#N canvas 406 140 807 693 masks 0;
+#X obj 179 227 cnv 15 291 22 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj 280 12 inlet;
 #X obj 280 33 sel 1 0;
 #X msg 313 85 255 255;
 #X obj 256 116 unpack f f;
-#X obj 376 789 outlet;
-#X obj 307 252 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 316 649 outlet;
+#X obj 290 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 272 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 218 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 252 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 452 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 272 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 362 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 254 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 312 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 272 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 416 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 312 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 434 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 200 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 352 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 308 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 326 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 352 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 398 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 372 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 236 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 392 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 182 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 372 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 380 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 327 392 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 344 231 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 1423 301 708 912 bytetobits 0;
 #X obj 98 187 / 2;
@@ -627,15 +624,15 @@
 #X connect 31 5 4 0;
 #X connect 31 6 2 0;
 #X connect 31 7 0 0;
-#X restore 394 686 pd bitstobyte;
-#X obj 394 660 pack f f f f f f f f, f 45;
-#X obj 490 614 t b f;
-#X obj 454 614 t b f;
-#X obj 418 614 t b f;
-#X obj 634 614 t b f;
-#X obj 598 614 t b f;
-#X obj 562 614 t b f;
-#X obj 526 614 t b f;
+#X restore 334 546 pd bitstobyte;
+#X obj 334 520 pack f f f f f f f f, f 45;
+#X obj 430 474 t b f;
+#X obj 394 474 t b f;
+#X obj 358 474 t b f;
+#X obj 574 474 t b f;
+#X obj 538 474 t b f;
+#X obj 502 474 t b f;
+#X obj 466 474 t b f;
 #N canvas 494 74 692 867 bitstobyte 0;
 #X floatatom 184 76 5 0 0 0 - - -;
 #X floatatom 185 166 5 0 0 0 - - -;
@@ -707,51 +704,51 @@
 #X connect 31 5 4 0;
 #X connect 31 6 2 0;
 #X connect 31 7 0 0;
-#X restore 117 686 pd bitstobyte;
-#X obj 117 660 pack f f f f f f f f, f 45;
-#X obj 213 614 t b f;
-#X obj 177 614 t b f;
-#X obj 141 614 t b f;
-#X obj 357 614 t b f;
-#X obj 321 614 t b f;
-#X obj 285 614 t b f;
-#X obj 249 614 t b f;
-#X obj 376 745 pack f f;
-#X obj 137 474 i;
-#X obj 163 474 i;
-#X obj 137 557 i;
-#X obj 163 557 i;
-#X obj 188 474 i;
-#X obj 214 474 i;
-#X obj 188 557 i;
-#X obj 214 557 i;
-#X obj 240 474 i;
-#X obj 266 474 i;
-#X obj 240 557 i;
-#X obj 266 557 i;
-#X obj 291 474 i;
-#X obj 317 474 i;
-#X obj 291 557 i;
-#X obj 317 557 i;
-#X obj 417 474 i;
-#X obj 443 474 i;
-#X obj 417 557 i;
-#X obj 443 557 i;
-#X obj 468 474 i;
-#X obj 494 474 i;
-#X obj 468 557 i;
-#X obj 494 557 i;
-#X obj 520 474 i;
-#X obj 546 474 i;
-#X obj 520 557 i;
-#X obj 546 557 i;
-#X obj 571 474 i;
-#X obj 597 474 i;
-#X obj 571 557 i;
-#X obj 597 557 i;
-#X text 610 507 patchcords flipped due to position;
-#X text 611 522 of capsense inside of Sopranino;
-#X obj 394 719 t b f;
+#X restore 57 546 pd bitstobyte;
+#X obj 57 520 pack f f f f f f f f, f 45;
+#X obj 153 474 t b f;
+#X obj 117 474 t b f;
+#X obj 81 474 t b f;
+#X obj 297 474 t b f;
+#X obj 261 474 t b f;
+#X obj 225 474 t b f;
+#X obj 189 474 t b f;
+#X obj 316 605 pack f f;
+#X obj 77 334 i;
+#X obj 103 334 i;
+#X obj 77 417 i;
+#X obj 103 417 i;
+#X obj 128 334 i;
+#X obj 154 334 i;
+#X obj 128 417 i;
+#X obj 154 417 i;
+#X obj 180 334 i;
+#X obj 206 334 i;
+#X obj 180 417 i;
+#X obj 206 417 i;
+#X obj 231 334 i;
+#X obj 257 334 i;
+#X obj 231 417 i;
+#X obj 257 417 i;
+#X obj 357 334 i;
+#X obj 383 334 i;
+#X obj 357 417 i;
+#X obj 383 417 i;
+#X obj 408 334 i;
+#X obj 434 334 i;
+#X obj 408 417 i;
+#X obj 434 417 i;
+#X obj 460 334 i;
+#X obj 486 334 i;
+#X obj 460 417 i;
+#X obj 486 417 i;
+#X obj 511 334 i;
+#X obj 537 334 i;
+#X obj 511 417 i;
+#X obj 537 417 i;
+#X text 550 367 patchcords flipped due to position;
+#X text 551 382 of capsense inside of Sopranino;
+#X obj 334 579 t b f;
 #X obj 130 97 r touchdata1;
 #X obj 387 96 r touchdata2;
 #X msg 256 85 0 0;
@@ -766,7 +763,7 @@
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
 #X connect 4 1 3 1;
-#X restore 376 766 pd debounce;
+#X restore 316 626 pd debounce;
 #X connect 1 0 2 0;
 #X connect 2 0 82 0;
 #X connect 2 1 3 0;
@@ -878,91 +875,81 @@
 #X connect 81 0 23 0;
 #X connect 82 0 4 0;
 #X connect 83 0 5 0;
-#X coords 0 -1 1 1 39 159 2 305 250;
-#X restore 528 135 pd masks;
-#X msg 534 435 disconnect;
-#X obj 530 480 netsend -u -b;
-#X obj 626 406 pack s f;
-#X symbolatom 300 137 20 0 0 2 T-Stick_IP - -;
-#X floatatom 430 137 5 0 0 2 port - -;
-#X obj 656 386 i;
-#X obj 626 366 t b f;
-#X text 600 184 Pressure sensor;
-#X floatatom 613 203 5 0 0 0 - - -;
-#X floatatom 651 203 5 0 0 0 - - -;
-#X text 602 223 calibration data;
-#X obj 602 116 bng 15 250 50 0 empty empty Write 17 7 0 10 -262144
--1 -1;
-#X obj 654 116 bng 15 250 50 0 empty empty Read 17 7 0 10 -262144 -1
--1;
-#X text 601 96 T-Stick memory;
-#X obj 144 80 unpack s f;
-#X obj 251 493 route list;
-#X msg 98 79 8000;
-#X obj 301 172 tgl 25 0 empty empty Receive_OSC_messages 30 14 0 14
--262144 -1 -1 1 1;
-#X obj 246 197 sel 1;
-#X msg 520 31 0;
-#X obj 105 39 t 1 b b;
-#X obj 32 79 delay 500;
-#X obj 636 588 unpack f f f f;
-#X floatatom 600 629 10 0 0 0 - - -;
-#X floatatom 666 629 10 0 0 0 - - -;
-#X floatatom 732 629 10 0 0 0 - - -;
-#X floatatom 798 629 10 0 0 0 - - -;
-#X text 289 859 Touch: 0 or 1 for each sensor (16 in the T-Stick Sopranino)
+#X coords 0 -1 1 1 295 26 2 177 225;
+#X restore 366 221 pd masks;
+#X msg 557 495 disconnect;
+#X obj 557 518 netsend -u -b;
+#X obj 683 462 pack s f;
+#X symbolatom 366 87 20 0 0 2 T-Stick_IP toip ip;
+#X floatatom 496 87 5 0 0 2 port toport port;
+#X obj 713 442 i;
+#X obj 683 422 t b f;
+#X floatatom 594 160 10 0 1 1 FSR_offset(between_0_and_1) fsr fsr-send
 ;
-#X text 289 927 Pressure: from 0 to 4095;
-#X text 289 944 Piezo: from 0 to 715;
-#X obj 238 588 route capsense accl gyro magn fsr piezo, f 62;
-#X text 645 569 Quaternions;
-#X text 797 933 Edu Meneses - IDMIL - Nov/2019;
-#X obj 428 340 oscformat state touchMask;
-#X obj 445 407 list prepend send;
-#X obj 445 431 list trim;
-#X obj 105 11 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 595 52 bng 15 250 50 0 write empty Write 17 7 0 10 -262144 -1
 -1;
-#X obj 586 340 oscformat state json;
-#X msg 606 312 1;
-#X msg 651 311 2;
+#X obj 647 52 bng 15 250 50 0 read empty Read 17 7 0 10 -262144 -1
+-1;
+#X text 594 32 T-Stick memory;
+#X obj 152 102 unpack s f;
+#X obj 257 493 route list;
+#X msg 106 88 8000;
+#X obj 367 122 tgl 25 0 empty empty Receive_OSC_messages 30 14 0 14
+-262144 -1 -1 1 1;
+#X obj 252 197 sel 1;
+#X msg 167 38 0;
+#X obj 113 48 t 1 b b;
+#X obj 40 88 delay 500;
+#X obj 672 588 unpack f f f f;
+#X floatatom 606 629 10 0 0 0 - - -;
+#X floatatom 672 629 10 0 0 0 - - -;
+#X floatatom 738 629 10 0 0 0 - - -;
+#X floatatom 804 629 10 0 0 0 - - -;
+#X text 295 859 Touch: 0 or 1 for each sensor (16 in the T-Stick Sopranino)
+;
+#X obj 244 588 route capsense accl gyro magn fsr piezo, f 62;
+#X text 681 569 Quaternions;
+#X text 803 913 Edu Meneses - IDMIL - Nov/2019;
+#X obj 404 380 oscformat state touchMask;
+#X obj 451 447 list prepend send;
+#X obj 451 471 list trim;
+#X obj 113 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 562 380 oscformat state json;
+#X msg 568 352 1;
+#X msg 627 351 2;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch 16 float 1;
-#A 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1;
+#A 0 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1;
 #X coords 0 2 15 -1 120 140 1;
-#X restore 16 686 graph;
-#X obj 251 515 route raw orientation ypr info;
-#X obj 383 555 s info;
-#X obj 751 120 r info;
-#X obj 751 145 unpack f f f f f f f;
-#X obj 723 221 s serial;
-#X obj 738 201 s firmware;
-#X obj 805 221 s calibrate;
-#X obj 878 221 s touchdata1;
-#X obj 887 201 s touchdata2;
-#X obj 626 454 list trim;
-#X obj 468 137 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 377 42 sel 1 0;
-#X obj 362 65 t b b;
-#X obj 626 431 list prepend connect;
-#X obj 289 328 oscformat state info;
-#X msg 289 309 1;
-#X floatatom 302 268 7 0 0 3 Serial_number serial sserial;
-#X floatatom 402 268 7 0 0 3 Firmware_version firmware sfirmware;
-#X obj 303 248 bng 15 250 50 0 empty empty Get_T-Stick_info 17 7 0
+#X restore 22 686 graph;
+#X obj 257 515 route raw orientation ypr info;
+#X obj 389 555 s info;
+#X obj 818 265 r info;
+#X obj 780 356 s serial;
+#X obj 797 336 s firmware;
+#X obj 902 336 s touchdata1;
+#X obj 911 316 s touchdata2;
+#X obj 683 502 list trim;
+#X obj 366 55 tgl 15 0 empty empty Send_OSC_messages_to_T-Stick 17
+7 0 10 -262144 -1 -1 1 1;
+#X obj 89 130 sel 1 0;
+#X obj 90 180 t b b;
+#X obj 683 482 list prepend connect;
+#X obj 315 348 oscformat state info;
+#X msg 315 329 1;
+#X floatatom 594 106 7 0 0 3 Serial_number serial sserial;
+#X floatatom 694 106 7 0 0 3 Firmware_version firmware sfirmware;
+#X obj 595 86 bng 15 250 50 0 getinfo empty Get_T-Stick_info 17 7 0
 10 -262144 -1 -1;
-#X obj 590 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 608 268 sync calibration;
-#X text 608 281 settings;
-#X obj 741 326 f;
-#X obj 741 349 pack 0 0 4095;
-#X obj 741 370 oscformat state FSRcalibration;
-#X obj 428 320 spigot;
-#X obj 210 310 delay 1000;
-#X msg 248 287 0;
-#X msg 210 331 1;
-#X obj 209 263 t b b b;
+#X obj 594 180 bng 15 250 50 0 empty empty send_FSR_offset 17 7 0 10
+-262144 -1 -1;
+#X obj 704 354 f;
+#X obj 572 288 spigot;
+#X obj 216 298 delay 1000;
+#X msg 254 279 0;
+#X msg 216 319 1;
+#X obj 215 258 t b b b;
 #N canvas 696 227 721 509 visual_orientation 0;
 #X obj 30 158 gemwin;
 #X msg 30 83 0 \, destroy;
@@ -1023,21 +1010,35 @@
 #X connect 24 0 7 0;
 #X connect 26 0 8 0;
 #X connect 26 1 5 0;
-#X restore 510 543 pd visual_orientation;
-#X obj 510 521 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 842 546 pd visual_orientation;
+#X obj 842 524 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 528 521 Click here to check orientation;
-#X text 797 916 T-Stick Sopranino 2GW FW19111;
-#X text 289 893 Gyro: floats +/-34.90659 rad/s (+/-2000dps);
-#X text 289 876 Accel: ints from +/-32767 (+/-16g);
-#X text 289 910 Mag: ints from +/-32767 (+/-8g);
-#X msg 144 59 192.168.21.109 8888;
-#X floatatom 939 497 10 0 0 0 - - -;
-#X floatatom 1005 497 10 0 0 0 - - -;
-#X floatatom 1071 497 10 0 0 0 - - -;
-#X obj 975 456 unpack f f f;
-#X obj 463 491 print;
-#X text 997 437 YPR;
+#X text 860 524 Click here to check orientation;
+#X text 803 896 T-Stick Sopranino 2GW FW19111;
+#X floatatom 876 629 10 0 0 0 - - -;
+#X floatatom 942 629 10 0 0 0 - - -;
+#X floatatom 1008 629 10 0 0 0 - - -;
+#X obj 912 588 unpack f f f;
+#X text 934 569 YPR;
+#X obj 167 59 s touch;
+#X obj 568 325 r write;
+#X obj 627 326 r read;
+#X obj 683 402 r port;
+#X obj 108 158 s todisconect;
+#X obj 557 473 r todisconect;
+#X obj 130 250 s toport;
+#X obj 157 231 s toip;
+#X obj 650 423 r ip;
+#X obj 719 331 r fsr-send;
+#X obj 704 378 oscformat state FSRoffset;
+#X obj 215 230 r getinfo;
+#X text 295 875 Accel: floats from -1 to 1 (+/-16g);
+#X text 295 891 Gyro: floats fom -1 to 1 (+/-2000dps);
+#X text 295 908 Mag: floats fom -1 to 1 (+/-8g);
+#X text 295 925 Pressure/Piezo: floats from 0 to 1;
+#X msg 152 81 192.168.1.132 8888;
+#X obj 818 290 unpack f f f f f;
+#X obj 862 356 s fsr;
 #X connect 2 0 32 0;
 #X connect 3 0 31 0;
 #X connect 4 0 22 0;
@@ -1055,105 +1056,101 @@
 #X connect 15 1 13 1;
 #X connect 16 0 15 0;
 #X connect 18 0 19 0;
-#X connect 21 0 65 0;
-#X connect 33 0 35 0;
-#X connect 33 0 44 0;
-#X connect 35 0 63 0;
-#X connect 36 0 1 0;
-#X connect 38 0 33 0;
-#X connect 39 0 38 0;
-#X connect 40 0 67 0;
-#X connect 40 0 68 0;
-#X connect 41 0 2 0;
-#X connect 41 1 3 0;
-#X connect 41 2 4 0;
-#X connect 42 0 5 0;
-#X connect 42 1 6 0;
-#X connect 42 2 7 0;
-#X connect 43 0 10 0;
-#X connect 43 1 11 0;
-#X connect 43 2 12 0;
-#X connect 45 0 111 1;
+#X connect 21 0 60 0;
+#X connect 33 0 34 0;
+#X connect 33 0 43 0;
+#X connect 34 0 58 0;
+#X connect 35 0 1 0;
+#X connect 37 0 33 0;
+#X connect 38 0 37 0;
+#X connect 39 0 62 0;
+#X connect 39 0 63 0;
+#X connect 40 0 2 0;
+#X connect 40 1 3 0;
+#X connect 40 2 4 0;
+#X connect 41 0 5 0;
+#X connect 41 1 6 0;
+#X connect 41 2 7 0;
+#X connect 42 0 10 0;
+#X connect 42 1 11 0;
+#X connect 42 2 12 0;
+#X connect 44 0 45 0;
+#X connect 45 0 101 0;
 #X connect 46 0 47 0;
-#X connect 47 0 114 0;
-#X connect 48 0 49 0;
-#X connect 50 0 102 0;
-#X connect 51 0 50 0;
-#X connect 52 0 54 0;
-#X connect 53 0 50 1;
-#X connect 54 0 50 0;
-#X connect 54 1 53 0;
-#X connect 56 0 112 1;
-#X connect 57 0 112 2;
-#X connect 59 0 86 0;
-#X connect 60 0 87 0;
-#X connect 62 0 51 0;
-#X connect 62 1 52 0;
-#X connect 63 0 89 0;
-#X connect 63 0 20 0;
-#X connect 64 0 39 0;
+#X connect 48 0 93 0;
+#X connect 51 0 48 1;
+#X connect 52 0 48 0;
+#X connect 52 1 51 0;
+#X connect 57 0 122 0;
+#X connect 57 1 121 0;
+#X connect 58 0 82 0;
+#X connect 58 0 20 0;
+#X connect 59 0 38 0;
+#X connect 60 0 61 0;
+#X connect 61 0 38 0;
+#X connect 61 1 37 0;
+#X connect 62 0 115 0;
+#X connect 63 0 64 0;
+#X connect 63 1 59 0;
+#X connect 63 2 131 0;
+#X connect 64 0 60 0;
 #X connect 65 0 66 0;
-#X connect 66 0 39 0;
-#X connect 66 1 38 0;
-#X connect 67 0 46 0;
-#X connect 68 0 69 0;
-#X connect 68 1 64 0;
-#X connect 68 2 126 0;
-#X connect 69 0 65 0;
-#X connect 70 0 71 0;
-#X connect 70 1 72 0;
-#X connect 70 2 73 0;
-#X connect 70 3 74 0;
-#X connect 78 0 36 0;
-#X connect 78 1 41 0;
-#X connect 78 2 42 0;
-#X connect 78 3 43 0;
-#X connect 78 4 8 0;
-#X connect 78 5 9 0;
-#X connect 81 0 82 0;
-#X connect 82 0 83 0;
-#X connect 83 0 49 0;
-#X connect 84 0 68 0;
-#X connect 85 0 82 0;
-#X connect 86 0 85 0;
-#X connect 87 0 85 0;
-#X connect 89 0 78 0;
-#X connect 89 1 70 0;
-#X connect 89 2 130 0;
-#X connect 89 2 119 1;
-#X connect 89 3 90 0;
+#X connect 65 1 67 0;
+#X connect 65 2 68 0;
+#X connect 65 3 69 0;
+#X connect 71 0 35 0;
+#X connect 71 1 40 0;
+#X connect 71 2 41 0;
+#X connect 71 3 42 0;
+#X connect 71 4 8 0;
+#X connect 71 5 9 0;
+#X connect 74 0 75 0;
+#X connect 75 0 76 0;
+#X connect 76 0 47 0;
+#X connect 77 0 63 0;
+#X connect 78 0 75 0;
+#X connect 79 0 78 0;
+#X connect 80 0 78 0;
+#X connect 82 0 71 0;
+#X connect 82 1 65 0;
+#X connect 82 2 113 0;
+#X connect 82 2 106 1;
+#X connect 82 3 83 0;
+#X connect 84 0 132 0;
+#X connect 89 0 47 0;
+#X connect 90 0 91 0;
 #X connect 91 0 92 0;
-#X connect 92 0 93 0;
-#X connect 92 1 94 0;
-#X connect 92 2 95 0;
-#X connect 92 3 56 0;
-#X connect 92 4 57 0;
-#X connect 92 5 96 0;
-#X connect 92 6 97 0;
-#X connect 98 0 49 0;
+#X connect 91 1 119 0;
+#X connect 92 0 121 0;
+#X connect 92 1 122 0;
+#X connect 93 0 89 0;
+#X connect 94 0 75 0;
+#X connect 95 0 94 0;
 #X connect 99 0 100 0;
-#X connect 100 0 101 0;
-#X connect 100 1 48 0;
-#X connect 101 0 52 0;
-#X connect 101 1 51 0;
-#X connect 102 0 98 0;
-#X connect 103 0 82 0;
-#X connect 104 0 103 0;
-#X connect 107 0 118 0;
-#X connect 108 0 111 0;
-#X connect 111 0 112 0;
-#X connect 112 0 113 0;
-#X connect 113 0 82 0;
-#X connect 114 0 81 0;
-#X connect 115 0 117 0;
-#X connect 116 0 114 1;
-#X connect 117 0 114 1;
-#X connect 118 0 115 0;
-#X connect 118 1 104 0;
-#X connect 118 2 116 0;
-#X connect 120 0 119 0;
-#X connect 126 0 62 0;
-#X connect 130 0 127 0;
-#X connect 130 1 128 0;
-#X connect 130 2 129 0;
-#X coords 0 -1 1 1 420 215 1 292 87;
+#X connect 100 0 125 0;
+#X connect 101 0 74 0;
+#X connect 102 0 104 0;
+#X connect 103 0 101 1;
+#X connect 104 0 101 1;
+#X connect 105 0 102 0;
+#X connect 105 1 95 0;
+#X connect 105 2 103 0;
+#X connect 107 0 106 0;
+#X connect 113 0 110 0;
+#X connect 113 1 111 0;
+#X connect 113 2 112 0;
+#X connect 116 0 79 0;
+#X connect 117 0 80 0;
+#X connect 118 0 52 0;
+#X connect 120 0 46 0;
+#X connect 123 0 48 0;
+#X connect 124 0 100 1;
+#X connect 125 0 75 0;
+#X connect 126 0 105 0;
+#X connect 131 0 57 0;
+#X connect 132 0 85 0;
+#X connect 132 1 86 0;
+#X connect 132 2 133 0;
+#X connect 132 3 87 0;
+#X connect 132 4 88 0;
+#X coords 0 -1 1 1 470 236 1 354 22;

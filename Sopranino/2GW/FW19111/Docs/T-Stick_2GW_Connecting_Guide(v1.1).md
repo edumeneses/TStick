@@ -19,7 +19,7 @@ The process, after learned, should take no more than 3min.
 
 ![Enter AP mode](./images/2_enter_AP_mode(v1.1).jpg "Enter AP mode")
 
--  Connect to the T-Stick network:
+-  Connect to the T-Stick network (default password: `mappings`):
 
 <img src="./images/3_Connect_2_tstick_network(v1.1).jpg" alt="Connect to the T-Stick network"	title="Connect to the T-Stick network" width="50%" height=auto />
 
@@ -79,6 +79,7 @@ You will see the main portal screen through the web browser. Enter “Configurat
 
 ## Guide info:
 
+Version 1.11: (2019/11/27) Edu Meneses - eduardo.meneses@mail.mcgill.ca\
 Version 1.1: (2019/10/27) Edu Meneses - eduardo.meneses@mail.mcgill.ca\
 Version 1.0: (2019/08/28) Edu Meneses
 

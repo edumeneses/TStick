@@ -63,7 +63,7 @@ byte receiveOSC() {
       msgReceive.fill(oscEndpoint.read());
     }
     if (!msgReceive.hasError()) {
-      Serial.println("Routing OSC message...\n");
+      Serial.println("Routing OSC message...");
       msgReceive.dispatch("/state/calibrate", saveIMUcalib); // receive IMU cal values and save to JSON
       msgReceive.dispatch("/state/touchMask", receiveTouchMask); // receive touchMask values (doesn't save to JSON)
       msgReceive.dispatch("/state/info", sendInfo); // send back T-Stick current config
@@ -97,12 +97,17 @@ void receiveTouchMask(OSCMessage &msg) {
   // message order: Tstick.touchMask[0], Tstick.touchMask[1]
   Tstick.touchMask[0] = (int)msg.getFloat(0);
   Tstick.touchMask[1] = (int)msg.getFloat(1);
+  Serial.print("touchMask values received: "); Serial.print(Tstick.touchMask[0]); 
+  Serial.print(" "); Serial.println(Tstick.touchMask[1]);
 }
 
 
 void receiveFSRoffset(OSCMessage &msg) {
-  // message order: Tstick.FSRcalibration, Tstick.touchMask[0], Tstick.touchMask[1]
-  Tstick.FSRoffset = (int)msg.getFloat(0);
+  // message order: Tstick.FSRoffset
+  Tstick.FSRoffset = (float)msg.getFloat(0);
+  Serial.print("FSRoffset value received: "); Serial.println(Tstick.FSRoffset);
+  Tstick.FSRoffset *= 4095;
+  Serial.print("FSRoffset value stored: "); Serial.println(Tstick.FSRoffset);
 }
 
 
@@ -111,7 +116,7 @@ void sendInfo(OSCMessage &msg) {
   OSCMessage msgInfo("/info");
     msgInfo.add(Tstick.id);
     msgInfo.add(Tstick.firmware);
-    msgInfo.add(Tstick.FSRoffset);
+    msgInfo.add(Tstick.FSRoffset/4095);
     msgInfo.add(Tstick.touchMask[0]);
     msgInfo.add(Tstick.touchMask[1]);
     oscEndpoint.beginPacket(osc_IP, Tstick.oscPORT);

@@ -2,10 +2,10 @@
 void readData() {
 
   // read capsense
-  if (millis() - touchLastRead > touchInterval) {
-      touchLastRead = millis();
-      readTouch();
-  }
+//  if (millis() - touchLastRead > touchInterval) {
+//      touchLastRead = millis();
+//      readTouch();
+//  }
 
   // read FSR
   Data.fsr = analogRead(fsrPin);
@@ -19,25 +19,25 @@ void readData() {
   static MIMUReading reading = MIMUReading::Zero();
   static Quaternion quat = Quaternion::Identity();
   if (mimu.readInto(reading)) {
-    calibrator.calibrate(reading);
     reading.updateBuffer();
+    copyFloatArrayToVar(reading.data, reading.size, Data.raw); //read raw before calibrate
+    calibrator.calibrate(reading);
     quat = filter.fuse(reading.gyro, reading.accl, reading.magn);
     
     copyFloatArrayToVar(reading.accl.data(), reading.accl.size(), Data.accl);
     copyFloatArrayToVar(reading.gyro.data(), reading.gyro.size(), Data.gyro);
     copyFloatArrayToVar(reading.magn.data(), reading.magn.size(), Data.magn);
-    copyFloatArrayToVar(reading.data, reading.size, Data.raw);
     copyFloatArrayToVar(quat.coeffs().data(), quat.coeffs().size(), Data.quat);
     
-    for (int i = 0; i < (sizeof(Data.accl)/sizeof(Data.accl[0])); i++) {
-      Data.accl[i] = mapfloat(Data.accl[i], -32767, 32767, -1, 1);
-      }
-    for (int i = 0; i < (sizeof(Data.gyro)/sizeof(Data.gyro[0])); i++) {
-      Data.gyro[i] = mapfloat(Data.gyro[i], -34.90659, 34.90659, -1, 1);
-      }
-    for (int i = 0; i < (sizeof(Data.magn)/sizeof(Data.magn[0])); i++) {
-      Data.magn[i] = mapfloat(Data.magn[i], -32767, 32767, -1, 1);
-      }
+//    for (int i = 0; i < (sizeof(Data.accl)/sizeof(Data.accl[0])); i++) {
+//      Data.accl[i] = mapfloat(Data.accl[i], -32767, 32767, -1, 1);
+//      }
+//    for (int i = 0; i < (sizeof(Data.gyro)/sizeof(Data.gyro[0])); i++) {
+//      Data.gyro[i] = mapfloat(Data.gyro[i], -34.90659, 34.90659, -1, 1);
+//      }
+//    for (int i = 0; i < (sizeof(Data.magn)/sizeof(Data.magn[0])); i++) {
+//      Data.magn[i] = mapfloat(Data.magn[i], -32767, 32767, -1, 1);
+//      }
 
     //calculateEulerAnglesQuat(Data.quat[0],Data.quat[1],Data.quat[2],Data.quat[3]);
     calculateEulerAngles(Data.accl[0],Data.accl[1],Data.accl[2],Data.magn[0],Data.magn[1],Data.magn[2]);

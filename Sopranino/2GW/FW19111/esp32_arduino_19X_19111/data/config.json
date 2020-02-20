@@ -1,13 +1,13 @@
 {
-    "id": 190,
+    "id": 206,
     "type": "SN", 
     "author": "IDMIL",
-    "color": "Color",
+    "color": "Black",
     "APpasswd": "mappings",
     "lastConnectedNetwork": "tstick_network",
     "lastStoredPsk": "mappings",
     "firmware": 19111,
-    "oscIP": "192.168.1.1",
+    "oscIP": "192.168.1.110",
     "oscPORT": 8000,
     "FSRoffset": 0,
     "touchMask": [

@@ -127,12 +127,12 @@ struct DataStruct {
   float accl[3];
   float gyro[3];
   float magn[3];
-  float raw[9];
+  float raw[10];
   float quat[4];
   float ypr[3];
 };
 
-DataStruct Data = {{0,0},0,0,{0,0,0},{0,0,0},{0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0},{0,0,0}};
+DataStruct Data = {{0,0},0,0,{0,0,0},{0,0,0},{0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0},{0,0,0}};
 
 IPAddress osc_IP; // used to send OSC messages
 char APpasswdTemp[15]; // used to check before save new T-Stick passwd
@@ -250,7 +250,7 @@ void setup() {
   initIMU();
 
   // Starting Capsense
-  initCapsense();
+  //initCapsense();
 
   Serial.println("\nT-Stick setup complete.\n");
   

@@ -341,6 +341,47 @@ void setupSensor()
   //lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_2000DPS);
 }
 
+void scan() {
+  Serial.println("\nI2C Scanner");
+
+  byte error, address;
+  int nDevices;
+
+  Serial.println("Scanning...");
+
+  nDevices = 0;
+  for(address = 1; address < 127; address++ ) 
+  {
+    // The i2c_scanner uses the return value of
+    // the Write.endTransmisstion to see if
+    // a device did acknowledge to the address.
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+
+    if (error == 0)
+    {
+      Serial.print("I2C device found at address 0x");
+      if (address<16) 
+        Serial.print("0");
+      Serial.print(address,HEX);
+      Serial.println("  !");
+
+      nDevices++;
+    }
+    else if (error==4) 
+    {
+      Serial.print("Unknown error at address 0x");
+      if (address<16) 
+        Serial.print("0");
+      Serial.println(address,HEX);
+    }    
+  }
+  if (nDevices == 0)
+    Serial.println("No I2C devices found\n");
+  else
+    Serial.println("done\n");
+}
+
 
 void setup()
 {
@@ -350,7 +391,9 @@ void setup()
     delay(1); // will pause Zero, Leonardo, etc until serial console opens
   }
 
-  Serial.println("checking IMU.....\n\n");
+  scan();
+  
+  Serial.println("\nchecking IMU.....\n\n");
 
   // Try to initialise and warn if we couldn't detect the chip
   if (!lsm.begin())
@@ -359,9 +402,9 @@ void setup()
     IMU_OK = false;
   }
   else {
-    Serial.println("*******************");
+    Serial.println("\n*******************");
     Serial.println("Found LSM9DS1 9DOF");
-    Serial.println("*******************");
+    Serial.println("*******************\n");
     IMU_OK = true;
     // helper to just set the default scaling we want, see above!
     setupSensor();
@@ -371,9 +414,9 @@ void setup()
   Serial.println("\n\n Checking Capsense....");
   initCapsense();
   Capsense_OK = true;
-  Serial.println("*******************");
+  Serial.println("\n*******************");
   Serial.println("Capsense OK");
-  Serial.println("*******************");
+  Serial.println("*******************\n");
 }
 
 void loop()

@@ -64,7 +64,13 @@ byte receiveOSC() {
     }
     if (!msgReceive.hasError()) {
       Serial.println("Routing OSC message...");
-      msgReceive.dispatch("/state/calibrate", saveIMUcalib); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/accl/vector", saveAcclVector); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/accl/matrix", saveAcclMatrix); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/gyro/vector", saveGyroVector); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/gyro/matrix", saveGyroMatrix); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/magn/vector", saveMagnVector); // receive IMU cal values and save to JSON
+      msgReceive.dispatch("/calibration/magn/matrix", saveMagnMatrix); // receive IMU cal values and save to JSON
+      
       msgReceive.dispatch("/state/touchMask", receiveTouchMask); // receive touchMask values (doesn't save to JSON)
       msgReceive.dispatch("/state/info", sendInfo); // send back T-Stick current config
       msgReceive.dispatch("/state/json", processJson); // Json file related commands
@@ -76,18 +82,25 @@ byte receiveOSC() {
   }
 }
 
+void saveAcclVector(OSCMessage &msg) { saveVector(msg, Tstick.abias); }
+void saveGyroVector(OSCMessage &msg) { saveVector(msg, Tstick.gbias); }
+void saveMagnVector(OSCMessage &msg) { saveVector(msg, Tstick.mbias); }
 
-void saveIMUcalib(OSCMessage &msg) {
-  // message order: avector[3], amatrix[9], mvector[3], mmatrix[9], gvector[3], gmatrix[9]
-  for (byte i = 0; i < 3; i++) {
-    Tstick.abias[i] = msg.getFloat(i);
-    Tstick.mbias[i+12] = msg.getFloat(i+12);
-    Tstick.gbias[i+24] = msg.getFloat(i+24);
+void saveAcclMatrix(OSCMessage &msg) { saveMatrix(msg, Tstick.acclcalibration); }
+void saveGyroMatrix(OSCMessage &msg) { saveMatrix(msg, Tstick.gyrocalibration); }
+void saveMagnMatrix(OSCMessage &msg) { saveMatrix(msg, Tstick.magncalibration); }
+
+void saveVector(OSCMessage &msg, float dest[3]) {
+  for (byte i = 0; i < 3; i++)
+  {
+    dest[i] = msg.getFloat(i);
   }
+  saveJSON();
+}
+
+void saveMatrix(OSCMessage &msg, float dest[9]) {
   for (byte i = 0; i < 9; i++) {
-    Tstick.acclcalibration[i+3] = msg.getFloat(i+3);
-    Tstick.magncalibration[i+15] = msg.getFloat(i+15);
-    Tstick.gyrocalibration[i+27] = msg.getFloat(i+27);
+    dest[i] = msg.getFloat(i);
   }
   saveJSON();  
 }

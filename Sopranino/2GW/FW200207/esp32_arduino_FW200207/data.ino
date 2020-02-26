@@ -16,6 +16,10 @@ void readData() {
   RawData.piezo = analogRead(piezoPin);
   NormData.piezo = mapfloat(RawData.piezo, 0, 1024, 0, 1);
 
+  // read battery level (https://www.youtube.com/watch?v=yZjpYmWVLh8&feature=youtu.be&t=88) 
+  battery = analogRead(batteryPin);
+  battery =  battery / 4096.0 * 7.445;
+
   // read IMU
   static MIMUReading reading = MIMUReading::Zero();
   static Quaternion quat = Quaternion::Identity();

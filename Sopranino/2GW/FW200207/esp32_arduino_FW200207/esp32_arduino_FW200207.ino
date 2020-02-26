@@ -207,9 +207,9 @@ float fsrbuf;
 #endif
 
 bool ledStatus = false;
-int long_blink = 1200;
+int long_blink = 1000;
 int short_blink = 600;
-int flickering = 100;
+int flickering = 80;
 
 void blinkLED(int ledInterval) {
   if (millis() > time_now + ledInterval) {
@@ -346,5 +346,5 @@ void loop() {
   // short blink = connected and sending data
   // flickering =  receiving OSC
   if ( WiFi.status() == WL_CONNECTED ) {blinkLED(flickering);}
-  else {blinkLED(short_blink);}
+  else {blinkLED(long_blink);}
 }

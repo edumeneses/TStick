@@ -75,17 +75,7 @@ void Wifimanager_portal(char *portal_name, char *portal_password) {
       Tstick.touchMask[2][0],Tstick.touchMask[2][1],
       Tstick.touchMask[3][0],Tstick.touchMask[3][1],
       Tstick.touchMask[4][0],Tstick.touchMask[4][1]);
-//  itoa(Tstick.touchMask[0][0],wifimanagerbuf,10);
-//  itoa(Tstick.touchMask[0][1],copybuf,10);
-//  strcat (wifimanagerbuf,copybuf);
-//  strcat (wifimanagerbuf,",");
-//  for (byte i=1; i < (sizeof(Tstick.touchMask)/sizeof(Tstick.touchMask)[0]); ++i) {
-//    itoa(Tstick.touchMask[i][0],copybuf,10);
-//    strcat (wifimanagerbuf,copybuf);
-//    itoa(Tstick.touchMask[i][1],copybuf,10);
-//    strcat (wifimanagerbuf,copybuf);
-//    strcat (wifimanagerbuf,",");
-//  }
+      
   WiFiManagerParameter wifimanager_touchMask("touchMask", "Touch Mask capacitive sensing values", wifimanagerbuf, 40);  
   
   WiFiManagerParameter wifimanager_id("id", "T-Stick serial number", itoa(Tstick.id,wifimanagerbuf,10), 6, "readonly");

@@ -3,55 +3,6 @@ void addFloatArrayToMessage(const float * const v, int size, OSCMessage& m) {
   for (int i = 0; i < size; ++i) m.add(*(v+i));
 }
 
-//void sendOSC(IPAddress ip,int32_t port) {
-//
-//  static OSCBundle bundle;
-//  
-//  OSCMessage msgCapsense("/raw/capsense");
-//    for (byte k=0; k < nCapsenses; k++) {
-//      msgCapsense.add(RawData.touch[k][0] & Tstick.touchMask[k][0]);
-//      msgCapsense.add(RawData.touch[k][1] & Tstick.touchMask[k][1]);
-//    }
-//    bundle.add(msgCapsense);
-//
-//  OSCMessage msgFsr("/raw/fsr");
-//    msgFsr.add(RawData.fsr);
-//    bundle.add(msgFsr);
-//
-//  OSCMessage msgPiezo("/raw/piezo");
-//    msgPiezo.add(RawData.piezo);
-//    bundle.add(msgPiezo);
-//
-//  OSCMessage msgAccl("/raw/accl");
-//    addFloatArrayToMessage(RawData.accl, sizeof(RawData.accl)/sizeof(RawData.accl[0]), msgAccl);
-//    bundle.add(msgAccl);
-//
-//  OSCMessage msgGyro("/raw/gyro");
-//    addFloatArrayToMessage(RawData.gyro, sizeof(RawData.gyro)/sizeof(RawData.gyro[0]), msgGyro);
-//    bundle.add(msgGyro);
-//    
-//  OSCMessage msgMagn("/raw/magn");
-//    addFloatArrayToMessage(RawData.magn, sizeof(RawData.magn)/sizeof(RawData.magn[0]), msgMagn);
-//    bundle.add(msgMagn);
-//
-//  OSCMessage msgRaw("/raw");
-//    addFloatArrayToMessage(RawData.raw, sizeof(RawData.raw)/sizeof(RawData.raw[0]), msgRaw);
-//    bundle.add(msgRaw);
-//
-//  OSCMessage msgQuat("/orientation");
-//    addFloatArrayToMessage(RawData.quat, sizeof(RawData.quat)/sizeof(RawData.quat[0]), msgQuat);
-//    bundle.add(msgQuat);
-//
-//  OSCMessage msgYpr("/ypr");
-//    addFloatArrayToMessage(RawData.ypr, sizeof(RawData.ypr)/sizeof(RawData.ypr[0]), msgYpr);
-//    bundle.add(msgYpr);
-//
-//  oscEndpoint.beginPacket(ip,port);
-//  bundle.send(oscEndpoint);
-//  oscEndpoint.endPacket();
-//  bundle.empty(); 
-//}
-
 void sendOSC(char* ip,int32_t port) {
 
   IPAddress oscIP;
@@ -132,6 +83,11 @@ void sendOSC(char* ip,int32_t port) {
       OSCMessage msgYpr(namespaceBuffer);
         addFloatArrayToMessage(RawData.ypr, sizeof(RawData.ypr)/sizeof(RawData.ypr[0]), msgYpr);
         bundle.add(msgYpr);
+
+      snprintf(namespaceBuffer,(sizeof(namespaceBuffer)-1),"/TStick_%i/battery",Tstick.id);
+      OSCMessage msgBattery(namespaceBuffer);
+        msgBattery.add(battery);
+        bundle.add(msgBattery);
     
       oscEndpoint.beginPacket(oscIP,port);
       bundle.send(oscEndpoint);

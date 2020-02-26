@@ -1,4 +1,4 @@
-# T-Stick 2GW (Firmware version: 19101)
+# T-Stick 2GW (Firmware version: 200207)
 
 - [First time firmware upload instructions](#first-time-firmware-upload-instructions)
 	* [Option 1: using .bin files and esptool.py](#option-1-using-bin-files-and-esptoolpy)
@@ -103,7 +103,7 @@ Each T-Stick uses a _config.json_ file to store all configuration paramethers.
 
 ##### Upload (flash) the firmware and config.json into the T-Stick:
 
-- Open the file `esp32_arduino_19X_19101.ino` using Arduino IDE
+- Open the file `esp32_arduino_FW200207.ino` using Arduino IDE
 - Choose the proper _board_: `Tools -> Board: "*******" -> LOLIN D32 PRO`
 - Choose Upload Speed: `Tools -> Upload Speed: "******" -> 115200`
 - Choose port:

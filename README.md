@@ -6,18 +6,18 @@ This repository hosts up to date firmware for the instruments currently  at the 
 
 ## Documentation:
 
-[T-Stick connection guide – v1.1 for wireless T-Sticks](./Sopranino/2GW/FW19101/Docs/T-Stick_2GW_Connecting_Guide(v1.1).md) (model [2GW-19X](./Sopranino/2GW/FW19101/README.md))
+[T-Stick connection guide – v1.2 for wireless T-Sticks](./Sopranino/2GW/FW200320/Docs/T-Stick_2GW_Connecting_Guide(v1.2).md) (model [2GW](./Sopranino/2GW/FW200320/README.md))
 
-[How to build a T-Stick Sopranino](./Sopranino/2GW/FW19101/Docs/T-Stick_2GW_building_instructions.md)
+[How to build a T-Stick Sopranino](./Sopranino/2GW/FW200320/Docs/T-Stick_2GW_building_instructions.md)
 
 ## Instruments:
 
-As of October 2019 there are 13 instruments at [IDMIL](http://www.idmil.org):
+As of March 2020 there are 23 instruments at [IDMIL](http://www.idmil.org):
 
 - 01 T-Stick Tenor (2G)
 - 06 T-Stick Sopranos (2G, 2GX, 2G-IMU)
 - 01 T-Stick Sopranino (2G)
-- 05 wireless T-Stick Sopraninos (2G, 2GW)
+- 15 wireless T-Stick Sopraninos (2G, 2GW)
 
 ## Project info:
 

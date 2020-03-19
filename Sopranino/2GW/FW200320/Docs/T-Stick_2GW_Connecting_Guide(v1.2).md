@@ -1,6 +1,6 @@
 <img src="./images/IDMIL-logo.png" alt="IDMIL logo"	title="IDMIL logo" width=auto height="75" /> &emsp; &emsp; &emsp; &emsp; <img src="./images/mcgill-logo.png" alt="McGill logo"	title="McGill logo" width=auto height="75" />
 
-# T-Stick Connecting Guide (v1.1)
+# T-Stick Connecting Guide (v1.2)
 
 This guide will show how to connect the T-Stick to a computer running macOS. This guide was tested on macOS Mojave, but it should work on older versions. To connect on Windows or Linux machines the procedure is similar, and this guide can serve as well.
 
@@ -15,7 +15,7 @@ The process, after learned, should take no more than 3min.
 
 ![Turn the T-Stick on](./images/1_Turn_T-Stick_on(v1.1).jpg "Turn the T-Stick on")
 
-- Push the setup button to enter AP-mode. The T-Stick will then create an access point.
+- Push the setup button for at least 3 seconds (long press) to enter AP-mode. The T-Stick will then create an access point.
 
 ![Enter AP mode](./images/2_enter_AP_mode(v1.1).jpg "Enter AP mode")
 
@@ -79,8 +79,9 @@ You will see the main portal screen through the web browser. Enter “Configurat
 
 ## Guide info:
 
-Version 1.11: (2019/11/27) Edu Meneses - eduardo.meneses@mail.mcgill.ca\
-Version 1.1: (2019/10/27) Edu Meneses - eduardo.meneses@mail.mcgill.ca\
+Version 1.: (2020/03/20) Edu Meneses - eduardo.meneses@mail.mcgill.ca\
+Version 1.11: (2019/11/27) Edu Meneses
+Version 1.1: (2019/10/27) Edu Meneses 
 Version 1.0: (2019/08/28) Edu Meneses
 
 __Input Devices and Music Interaction Laboratory__\

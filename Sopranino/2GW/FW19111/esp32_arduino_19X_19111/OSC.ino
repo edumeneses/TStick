@@ -50,7 +50,7 @@ void sendOSC() {
   bundle.empty(); 
 }
 
-byte receiveOSC() {
+void receiveOSC() {
 
   OSCErrorCode error;
   OSCMessage msgReceive;

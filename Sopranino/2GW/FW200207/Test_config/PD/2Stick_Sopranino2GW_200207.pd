@@ -1,47 +1,46 @@
-#N canvas 217 -1057 1393 1005 10;
+#N canvas 212 23 1393 1005 10;
 #X declare -lib Gem;
 #X obj 357 25 cnv 15 464 230 empty empty T-Stick 20 12 0 20 -228856
 -66577 0;
 #X obj 97 510 vsl 45 135 -32767 32767 0 0 empty empty AccelX 0 -9 0
-10 -262144 -1 -1 6974 1;
+10 -262144 -1 -1 6710 1;
 #X obj 147 510 vsl 45 135 -32767 32767 0 0 empty empty AccelY 0 -9
-0 10 -262144 -1 -1 6699 1;
+0 10 -262144 -1 -1 6419 1;
 #X obj 197 510 vsl 45 135 -32767 32767 0 0 empty empty AccelZ 0 -9
-0 10 -262144 -1 -1 6691 1;
+0 10 -262144 -1 -1 6709 1;
 #X obj 247 510 vsl 45 135 -41 41 0 0 empty empty GyroX 0 -9 0 10 -262144
--1 -1 6689 1;
+-1 -1 6708 1;
 #X obj 297 510 vsl 45 135 -41 41 0 0 empty empty GyroY 0 -9 0 10 -262144
--1 -1 6702 1;
+-1 -1 6704 1;
 #X obj 347 510 vsl 45 135 -41 41 0 0 empty empty GyroZ 0 -9 0 10 -262144
--1 -1 6700 1;
+-1 -1 6707 1;
 #X obj 547 510 vsl 45 135 0 4095 0 0 empty empty Pressure 0 -9 0 10
--262144 -1 -1 10282 1;
+-262144 -1 -1 10455 1;
 #X obj 597 510 vsl 45 135 0 1023 0 0 empty empty Piezo 0 -9 0 10 -262144
 -1 -1 13400 1;
 #X obj 397 510 vsl 45 135 -32767 32767 0 0 empty empty MagX 0 -9 0
-10 -262144 -1 -1 6843 1;
+10 -262144 -1 -1 6680 1;
 #X obj 447 510 vsl 45 135 -32767 32767 0 0 empty empty MagY 0 -9 0
-10 -262144 -1 -1 6661 1;
+10 -262144 -1 -1 6899 1;
 #X obj 497 510 vsl 45 135 -32767 32767 0 0 empty empty MagZ 0 -9 0
-10 -262144 -1 -1 6731 1;
+10 -262144 -1 -1 6638 1;
 #X obj 904 561 timer;
 #X floatatom 904 585 8 0 0 0 - - -;
 #X obj 904 536 t b b;
 #X obj 904 511 r rawtimer;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array rawtime 100 float 1;
-#A 0 20.3175 20.3175 23.22 21.7687 20.3175 21.7687 23.22 21.7687 20.3175
-21.7687 21.7687 20.3175 21.7687 21.7687 20.3175 18.8662 24.6712 21.7687
-21.7687 21.7687 21.7687 20.3175 23.22 20.3175 21.7687 21.7687 21.7687
-20.3175 21.7687 23.22 21.7687 21.7687 21.7687 21.7687 21.7687 20.3175
-21.7687 21.7687 21.7687 20.3175 23.22 20.3175 21.7687 21.7687 20.3175
-21.7687 21.7687 20.3175 23.22 20.3175 21.7687 17.415 24.6712 20.3175
-21.7687 21.7687 21.7687 20.3175 21.7687 15.9637 27.5737 20.3175 21.7687
-20.3175 23.22 20.3175 21.7687 21.7687 20.3175 20.3175 20.3175 24.6712
-20.3175 20.3175 23.22 17.415 24.6712 18.8662 21.7687 23.22 20.3175
-21.7687 21.7687 21.7687 21.7687 20.3175 21.7687 17.415 24.6712 21.7687
-20.3175 23.22 21.7687 20.3175 20.3175 23.22 21.7687 21.7687 20.3175
-21.7687;
+#A 0 15.9637 17.415 15.9637 15.9637 17.415 15.9637 17.415 17.415 15.9637
+15.9637 15.9637 17.415 17.415 15.9637 18.8662 15.9637 15.9637 15.9637
+17.415 17.415 15.9637 15.9637 15.9637 17.415 14.5125 15.9637 18.8662
+15.9637 8.70748 24.6712 17.415 15.9637 15.9637 17.415 17.415 15.9637
+17.415 17.415 15.9637 15.9637 17.415 17.415 15.9637 14.5125 18.8662
+15.9637 15.9637 17.415 15.9637 17.415 17.415 15.9637 14.5125 17.415
+17.415 15.9637 17.415 15.9637 17.415 15.9637 15.9637 15.9637 17.415
+15.9637 15.9637 17.415 17.415 15.9637 17.415 15.9637 15.9637 17.415
+15.9637 17.415 17.415 14.5125 17.415 17.415 17.415 15.9637 17.415 15.9637
+15.9637 17.415 17.415 14.5125 17.415 17.415 14.5125 17.415 17.415 15.9637
+17.415 17.415 15.9637 4.35374 29.0249 17.415 13.0612 20.3175;
 #X coords 0 100 99 0 200 140 1;
 #X restore 698 508 graph;
 #N canvas 264 335 568 475 timegraph 0;
@@ -81,7 +80,7 @@
 #X floatatom 97 653 7 0 0 0 - - -;
 #X obj 257 278 netreceive -u -b;
 #X obj 257 299 oscparse;
-#N canvas 475 -929 1130 740 cook_touch_sopranino 0;
+#N canvas 475 22 1130 740 cook_touch_sopranino 0;
 #X obj 360 19 inlet;
 #X obj 18 366 unpack f f;
 #X obj 106 304 t b b l;
@@ -1848,8 +1847,8 @@
 #X msg 986 240 2;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch 16 float 1;
-#A 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1;
-#X coords 0 2 15 -1 60 140 1 0 0;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 2 15 -1 60 140 1;
 #X restore 659 767 graph;
 #X obj 295 390 s info;
 #X obj 888 80 r info;
@@ -1859,7 +1858,7 @@
 #X obj 981 131 s touchdata2;
 #X obj 1042 391 list trim;
 #X obj 366 55 tgl 15 0 empty empty Send_OSC_messages_to_T-Stick 17
-7 0 10 -262144 -1 -1 1 1;
+7 0 10 -262144 -1 -1 0 1;
 #X obj 52 130 sel 1 0;
 #X obj 53 180 t b b;
 #X obj 1042 371 list prepend connect;
@@ -1877,7 +1876,7 @@
 #X msg 711 287 0;
 #X msg 621 343 1;
 #X obj 620 302 t b b b;
-#N canvas 696 227 721 509 visual_orientation 0;
+#N canvas 179 102 723 542 visual_orientation 0;
 #X obj 30 158 gemwin;
 #X msg 30 83 0 \, destroy;
 #X obj 296 328 gemhead;
@@ -1901,7 +1900,7 @@
 #X obj 30 30 inlet;
 #X obj 30 51 sel 0 1;
 #X obj 400 150 inlet;
-#X obj 400 171 unpack f f f;
+#X obj 400 174 unpack f f f;
 #X text 637 321 zoom;
 #X obj 617 39 inlet;
 #X obj 617 66 moses 0;
@@ -1909,6 +1908,18 @@
 #X obj 295 383 scale 1.3;
 #X obj 299 23 declare -lib Gem;
 #X obj 104 83 t b b;
+#X obj 451 215 f;
+#X obj 436 241 - 0;
+#X obj 509 85 inlet;
+#X text 69 31 create/destroy window;
+#X text 434 150 YPR;
+#X text 523 108 align/reset;
+#X text 656 39 zoom;
+#X obj 518 156 sel 1;
+#X obj 481 214 f;
+#X obj 466 240 - 0;
+#X obj 511 214 f;
+#X obj 496 240 - 0;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
 #X connect 3 0 12 0;
@@ -1926,20 +1937,36 @@
 #X connect 17 0 1 0;
 #X connect 17 1 26 0;
 #X connect 18 0 19 0;
-#X connect 19 0 6 1;
-#X connect 19 0 12 1;
-#X connect 19 1 6 2;
-#X connect 19 2 6 3;
-#X connect 19 2 12 2;
+#X connect 19 0 27 1;
+#X connect 19 0 28 0;
+#X connect 19 1 35 1;
+#X connect 19 1 36 0;
+#X connect 19 2 37 1;
+#X connect 19 2 38 0;
 #X connect 21 0 22 0;
 #X connect 22 1 23 0;
 #X connect 23 0 15 0;
 #X connect 24 0 7 0;
 #X connect 26 0 8 0;
 #X connect 26 1 5 0;
+#X connect 27 0 28 1;
+#X connect 28 0 6 1;
+#X connect 28 0 12 1;
+#X connect 29 0 34 0;
+#X connect 34 0 27 0;
+#X connect 34 0 35 0;
+#X connect 34 0 37 0;
+#X connect 34 1 28 1;
+#X connect 34 1 38 1;
+#X connect 34 1 36 1;
+#X connect 35 0 36 1;
+#X connect 36 0 6 2;
+#X connect 37 0 38 1;
+#X connect 38 0 6 3;
+#X connect 38 0 12 2;
 #X restore 1002 480 pd visual_orientation;
 #X obj 1002 458 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X text 1020 458 Click here to check orientation;
 #X text 833 20 T-Stick Sopranino 2GW FW19111;
 #X floatatom 1036 563 10 0 0 0 - - -;
@@ -1963,27 +1990,27 @@
 #X obj 888 105 unpack f f f f f;
 #X obj 932 171 s fsr;
 #X obj 97 769 vsl 45 135 -1 1 0 0 empty empty AccelX 0 -9 0 10 -262144
--1 -1 6974 1;
+-1 -1 6710 1;
 #X obj 147 769 vsl 45 135 -1 1 0 0 empty empty AccelY 0 -9 0 10 -262144
--1 -1 6699 1;
+-1 -1 6419 1;
 #X obj 197 769 vsl 45 135 -1 1 0 0 empty empty AccelZ 0 -9 0 10 -262144
--1 -1 6691 1;
+-1 -1 6709 1;
 #X obj 247 769 vsl 45 135 -1 1 0 0 empty empty GyroX 0 -9 0 10 -262144
--1 -1 6689 1;
+-1 -1 6708 1;
 #X obj 297 769 vsl 45 135 -1 1 0 0 empty empty GyroY 0 -9 0 10 -262144
--1 -1 6702 1;
+-1 -1 6704 1;
 #X obj 347 769 vsl 45 135 -1 1 0 0 empty empty GyroZ 0 -9 0 10 -262144
--1 -1 6700 1;
+-1 -1 6707 1;
 #X obj 547 769 vsl 45 135 0 1 0 0 empty empty Pressure 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 597 769 vsl 45 135 0 1 0 0 empty empty Piezo 0 -9 0 10 -262144
 -1 -1 13400 1;
 #X obj 397 769 vsl 45 135 -1 1 0 0 empty empty MagX 0 -9 0 10 -262144
--1 -1 6843 1;
+-1 -1 6680 1;
 #X obj 447 769 vsl 45 135 -1 1 0 0 empty empty MagY 0 -9 0 10 -262144
--1 -1 6661 1;
+-1 -1 6899 1;
 #X obj 497 769 vsl 45 135 -1 1 0 0 empty empty MagZ 0 -9 0 10 -262144
--1 -1 6731 1;
+-1 -1 6638 1;
 #X floatatom 197 912 7 0 0 0 - - -;
 #X floatatom 247 912 7 0 0 0 - - -;
 #X floatatom 297 912 7 0 0 0 - - -;
@@ -2005,22 +2032,22 @@
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch2 16 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 2 15 -1 60 140 1 0 0;
+#X coords 0 2 15 -1 60 140 1;
 #X restore 721 767 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch3 16 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 2 15 -1 60 140 1 0 0;
+#X coords 0 2 15 -1 60 140 1;
 #X restore 783 767 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch4 16 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 2 15 -1 60 140 1 0 0;
+#X coords 0 2 15 -1 60 140 1;
 #X restore 845 767 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Touch5 16 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 2 15 -1 60 140 1 0 0;
+#X coords 0 2 15 -1 60 140 1;
 #X restore 907 767 graph;
 #X text 20 726 Normalized (/norm);
 #X text 124 341 Change T-Stick NAME!;
@@ -2028,8 +2055,10 @@
 #X obj 257 362 route raw orientation ypr info norm battery;
 #X obj 554 378 s battery;
 #X obj 1043 730 r battery;
-#X floatatom 1043 751 10 0 0 0 - - -;
-#X obj 128 393 print;
+#X floatatom 1039 791 10 0 0 0 - - -;
+#X obj 1137 481 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 1156 481 align;
 #X connect 1 0 30 0;
 #X connect 2 0 29 0;
 #X connect 3 0 20 0;
@@ -2172,4 +2201,5 @@
 #X connect 162 4 152 0;
 #X connect 162 5 163 0;
 #X connect 164 0 165 0;
+#X connect 166 0 102 2;
 #X coords 0 -1 1 1 470 236 1 354 22;
